@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap');
+$main-font: 'Roboto', sans-serif!important;
+$main-color: rgb(241, 197, 255)!important;
+$container-color: rgb(250, 227, 227)!important;
+
+body{
+    background-color: $main-color;
+    font-family: $main-font;
+}
+.main-container{
+    border-radius: 10px;
+    padding: 0 3rem;
+    overflow: hidden;
+    background-color: $container-color;
+    .container-div{
+        padding: 30px;
+    }
+    .home-title{
+        padding: 20px;
+        font-family: italic;
+        font-weight: 500;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .home-image{
+        margin-top: 5px;
+        width: 100%;
+        border-radius: 20px;
+        opacity: 0.99;
+    }
+    .italian-button{
+        background-color: green;
+        background-size:contain;
+        background-position: 50% 50%;
+        background-repeat:no-repeat;
+    }    
+    .english-button{
+        background-color:blue;
+    }  
+    .home-description{
+        padding: 25px;
+    }  
+}    
+
