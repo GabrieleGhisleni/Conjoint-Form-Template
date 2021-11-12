@@ -1,7 +1,7 @@
 import { Row, Col, Button } from 'reactstrap'
-import { HDESCRIPTION } from './shared/header-description'
-import React from 'react'
+import { TEXT } from './shared/text'
 import Iframe from 'react-iframe'
+import React from 'react'
 
 const Header = (props) => {
     return (
@@ -13,29 +13,31 @@ const Header = (props) => {
             </Row>
             <div className='container-div'>
                 <Row>
-                    <Col xs='8' >
-                        <h2 className='home-title' > Economies | Web App <br />Conjoint Choice Based Survey</h2>
+                    <Col xs='12' sm='8' >
+                        <h2 className='home-title' > {TEXT[props.lang].title}<br/><span style={{fontSize:"1.5rem"}}>Conjoint Choice Based Survey</span></h2>
                     </Col>
-                    <Col xs='auto' className='align-self-center'>
+                    <Col xs='12' sm='auto' className='align-self-center text-center'>
                         <Button onClick={() => props.langF('it')} className='italian-button'>IT </Button>
                         <Button onClick={() => props.langF('en')} className='english-button'>EN</Button>
                     </Col>
-                </Row>
-                <Row className='home-description'>
+ 
                     <Col xs='12'>
-                        {HDESCRIPTION[props.lang].description}
+                        {TEXT[props.lang].description}
                     </Col>
-                    <Col xs='12' className='text-center'>
-                        <h4>Economies | WebApp {props.lang == 'it' ? <p>Dimostrazione</p> : <p>Showing off</p>}</h4>
-                        <Iframe url="http://www.youtube.com/embed/xDMP3i36naA"
-                            width="60%"
-                            height="100%"
-                            display="initial"
-                            position="relative"
+                    <Col xs='12' className='text-center iframe-container'>
+                        <h4>{TEXT[props.lang].title} {props.lang == 'it' ? <span>Dimostrazione</span> : <span>Showing off</span>}</h4>
+                        <Iframe url={TEXT[props.lang].url}
+                            width= "90%"
+                            height="200%"
+                          
                             allowFullScreen
                             allow="fullscreen"/>
                     </Col>
+
+                <Col xs='12' className='text-center button-go-form'>
+                <Button color='success' onClick={()=>{ document.getElementById('title').scrollIntoView({behavior: "smooth"})}}>Start Now</Button></Col>
                 </Row>
+                <hr/>
             </div>
             </React.Fragment>
     )

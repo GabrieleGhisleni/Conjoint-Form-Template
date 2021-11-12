@@ -3,10 +3,58 @@ $main-font: 'Roboto', sans-serif!important;
 $main-color: rgb(241, 197, 255)!important;
 $container-color: rgb(250, 227, 227)!important;
 
+.question-container{
+    margin-top: 100vh;
+    @media screen and (max-width: "900px") {
+        padding-right: 0px!important;
+        padding-left: 0px!important;
+    
+      }
+    .col-final-submit{
+        padding-bottom: 100px;
+        border-radius: 20px;
+        background-color: rgb(181, 247, 181);
+    }
+    .attribute-names{
+        font-style: italic;
+    }
+    .question-button-col{
+        margin-top: 1.5rem;
+    }
+    .questionario-title{
+        font-family: $main-font;
+        font-style: italic;
+    }
+    .question-row{
+        margin:5rem 1.5rem;
+        padding:1rem;
+        border: rgb(70, 68, 68) 1px solid;
+        border-radius: 10px;
+        font-weight: 800;
+        @media screen and (max-width: "900px") {
+            margin-right: 0px!important;
+            margin-left: 0px!important;
+          }
+        .record-option{
+            font-weight: 500;
+            padding: 2rem 0rem;
+            border: grey 1px dashed;
+            border-radius: 20px;
+            @media screen and (max-width: "900px") {
+                padding-right: 0px!important;
+                padding-left: 0px!important;
+              }
+
+           
+        }
+    }
+}
+
 body{
     background-color: $main-color;
     font-family: $main-font;
 }
+
 .main-container{
     border-radius: 10px;
     padding: 0 3rem;
@@ -39,5 +87,12 @@ body{
     .home-description{
         padding: 25px;
     }  
+    .iframe-container{
+        margin:40px;
+    }
+    .button-go-form{
+        padding-top:150px;
+        margin-top:150px;
+    }
 }    
 

@@ -1,4 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap");
+.question-container {
+  margin-top: 100vh; }
+  @media screen and (max-width: 900px) {
+    .question-container {
+      padding-right: 0px !important;
+      padding-left: 0px !important; } }
+  .question-container .col-final-submit {
+    padding-bottom: 100px;
+    border-radius: 20px;
+    background-color: #b5f7b5; }
+  .question-container .attribute-names {
+    font-style: italic; }
+  .question-container .question-button-col {
+    margin-top: 1.5rem; }
+  .question-container .questionario-title {
+    font-family: "Roboto", sans-serif !important;
+    font-style: italic; }
+  .question-container .question-row {
+    margin: 5rem 1.5rem;
+    padding: 1rem;
+    border: #464444 1px solid;
+    border-radius: 10px;
+    font-weight: 800; }
+    @media screen and (max-width: 900px) {
+      .question-container .question-row {
+        margin-right: 0px !important;
+        margin-left: 0px !important; } }
+    .question-container .question-row .record-option {
+      font-weight: 500;
+      padding: 2rem 0rem;
+      border: grey 1px dashed;
+      border-radius: 20px; }
+      @media screen and (max-width: 900px) {
+        .question-container .question-row .record-option {
+          padding-right: 0px !important;
+          padding-left: 0px !important; } }
+
 body {
   background-color: #f1c5ff !important;
   font-family: "Roboto", sans-serif !important; }
@@ -29,3 +66,8 @@ body {
     background-color: blue; }
   .main-container .home-description {
     padding: 25px; }
+  .main-container .iframe-container {
+    margin: 40px; }
+  .main-container .button-go-form {
+    padding-top: 150px;
+    margin-top: 150px; }
