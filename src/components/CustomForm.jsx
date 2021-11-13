@@ -1,13 +1,18 @@
-import { SETTINGS } from "./shared/settings"
-import { DATA } from "./shared/data";
-import { TabContent, TabPane, Button, Row, Col, Container, List } from "reactstrap";
+import { Button, Row, Col, Container } from "reactstrap";
+import toast, { Toaster } from 'react-hot-toast';
 import React, { useState, useEffect } from 'react'
+import { SETTINGS } from "./shared/settings"
 
 const CustomForm = (props) => {
-    if (DATA.length % SETTINGS.n_attributes !== 0) alert("Number of questions wrong!")  
-    var [j, trial] = [0, [], []];
-    const [control, setcontrol] = useState(new Set())
+    const product_profiles = SETTINGS.product_profiles
+    const n_attributes = SETTINGS.n_attributes
+    const DATA = props.data
+
     const [selected, setselected] = useState(new Set())
+    const [control, setcontrol] = useState(new Set())
+    var [j, trial] = [0, [], []];
+
+    if (DATA.length % product_profiles !== 0) alert("Number of questions wrong!")  
 
     useEffect(() => {
         selected.forEach(r => {
@@ -19,14 +24,13 @@ const CustomForm = (props) => {
             })})
 
     function saveSelect(id){
+        var row_check = Math.floor(id/2.9)
         if (selected.has(id)){
-            var row_check = Math.floor(id/2.9)
             let box = document.getElementById(`row-${id}`)
             box.style.backgroundColor = "rgb(250, 227, 227)"
             setcontrol(prev => new Set([...prev].filter(x => x !== row_check)))     
             setselected(prev => new Set([...prev].filter(x => x !== id)))}
         else{
-            var row_check = Math.floor(id/2.9)
             setcontrol(prev => new Set(prev.add(row_check)))     
             setselected(prev => new Set(prev.add(id)))}
     }
@@ -37,68 +41,72 @@ const CustomForm = (props) => {
     
     for (let idx = 0; idx < DATA.length; idx+=3){
         j++
-        const options = DATA.slice(idx, idx+ SETTINGS.n_attributes)
-        const renderedOptions = options.map( r =>{   
+
+        const options = DATA.slice(idx, idx+ product_profiles)
+        const renderedOptions = options.map( r => { 
+
             const HandleChecked = () =>{ 
+                console.log(control)
                 if (control.has(Math.floor(idx/2.9)) && (selected.has(r.id))){
                     return(
                         <Button color='primary'  
                             id={`btn-${r.id}`}
                             className='question-button-col' 
                             onClick={()=>{saveSelect(r.id);}}>
-                            Select
-                    </Button>)
-                } 
+                            {props.lang==='it'?<span>Seleziona</span>:<span>Select</span>}
+                    </Button>)} 
                 else if (control.has(Math.floor(idx/2.9))){
                     return(
                         <Button color='primary'  
                             id={`btn-${r.id}`}
                             className='question-button-col' 
                             onClick={()=> {alert("Deseleziona First");}}>
-                            Select
-                    </Button>)
-                } 
+                            {props.lang==='it'?<span>Seleziona</span>:<span>Select</span>}
+                    </Button>)} 
                 else{
                     return(
                         <Button color='primary'  
                             id={`btn-${r.id}`}
                             className='question-button-col' 
                             onClick={()=> {saveSelect(r.id);}}>
-                            Select
+                            {props.lang==='it'?<span>Seleziona</span>:<span>Select</span>}
                     </Button>
-                );}
-            }
+                )}}
            
+            const AttributesLevels = () => {
+                var renderedAttributes = []
+                for (let i = 0; i < n_attributes; i++){
+                    renderedAttributes.push(<Col xs='12'> {SETTINGS[props.lang].mask[i][r[i]]}</Col>)} 
+                return renderedAttributes
+            }
 
             return(
-                <Col sm='3' className='record-option text-center' id={`row-${r.id}`}>
-                    <Col xs='12'> {SETTINGS[props.lang].mask[0][r[0]]}</Col>
-                    <Col xs='12'>{SETTINGS[props.lang].mask[1][r[1]]}</Col>
-                    <Col xs='12'>{SETTINGS[props.lang].mask[2][r[2]]}</Col>
-                    <Col xs='12'>{SETTINGS[props.lang].mask[3][r[3]]}</Col>
-                    <Col xs='12'>{SETTINGS[props.lang].mask[4][r[4]]}</Col>
-                <Col xs='12'>
-                < HandleChecked />
-                </Col>
+            <Col sm='3' className='record-option text-center' id={`row-${r.id}`}>
+                    < AttributesLevels/>
+                <Col xs='12'>< HandleChecked /></Col>
             </Col>
         )})
-        
+
+
+        const Attributes = () =>{
+            var attributes = []
+            for (let i = 0; i < n_attributes; i++){
+                attributes.push(<Col xs='12'>{SETTINGS[props.lang].attributes[[i]]}</Col>);}
+            return attributes
+        }
+
         trial.push(
             <Row className='question-row align-items-center text-left' >
                 <Col xs='12'>
-                    <h4>{props.lang=='it'?<p>Domanda  {j}/15</p>:<p>Question  {j}/15</p>}</h4>
+                    <h4>{props.lang==='it'?<p>Domanda  {j}/{SETTINGS.n_questions}</p>:<p>Question  {j}/{SETTINGS.n_questions}</p>}</h4>
                     <h5>
-                        {props.lang=='it'?<p>Scegli l'opzione a te preferibile.</p>
+                        {props.lang==='it'?<p>Scegli l'opzione che ritieni migliore.</p>
                         :<p>Select the options that you prefer</p>}
                         </h5>
                 </Col>
                 <Col sm='3' className='attribute-names text-center'>
                     <h6>Gli attributi si riferiscono in ordine a:</h6>
-                    <Col xs='12'>{SETTINGS[props.lang].attributes[[0]]}</Col>
-                    <Col xs='12'> {SETTINGS[props.lang].attributes[[1]]}</Col>
-                    <Col xs='12'> {SETTINGS[props.lang].attributes[[2]]}</Col>
-                    <Col xs='12'> {SETTINGS[props.lang].attributes[[3]]}</Col>
-                    <Col xs='12'> {SETTINGS[props.lang].attributes[[4]]}</Col>
+                    <Attributes/>
                     {window.innerWidth>800? <Col xs='12' className='question-button-col'>&nbsp;</Col>:null}
                 </Col>
                     {renderedOptions}
@@ -111,11 +119,13 @@ const CustomForm = (props) => {
     return (
         <Container className='text-center question-container'>
             <h1 className='questionario-title' id='title'>
-                {props.lang=='it'? <span>Questionario</span>: <span>Form</span> }
+                {props.lang==='it'? <span>Questionario</span>: <span>Survey</span> }
             </h1>
             {trial}
             <Col className='col-final-submit'>
-                <Button color='success' onClick={()=>onFinalSubmit()}>SUBMIT THE FORM</Button>
+                <Button color='success' className='btn-go-form' onClick={()=>onFinalSubmit()}>
+                    {props.lang==='it'? <span>Invia Questionario</span>: <span>Submit Form</span> }
+                </Button>
             </Col>
         </Container>
     )

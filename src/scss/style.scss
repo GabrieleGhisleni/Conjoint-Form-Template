@@ -11,9 +11,14 @@ $container-color: rgb(250, 227, 227)!important;
     
       }
     .col-final-submit{
-        padding-bottom: 100px;
-        border-radius: 20px;
-        background-color: rgb(181, 247, 181);
+        padding-top:50px;
+        margin: 50px 0;
+        .btn-go-form{
+            padding: 25px;
+            font-size: 2rem;
+            font-weight: 800;
+            font-style: italic;
+        }
     }
     .attribute-names{
         font-style: italic;
@@ -56,43 +61,81 @@ body{
 }
 
 .main-container{
-    border-radius: 10px;
     padding: 0 3rem;
     overflow: hidden;
+    border-radius: 10px;
     background-color: $container-color;
     .container-div{
         padding: 30px;
     }
     .home-title{
         padding: 20px;
-        font-family: italic;
         font-weight: 500;
+        font-family: italic;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .home-image{
-        margin-top: 5px;
         width: 100%;
-        border-radius: 20px;
         opacity: 0.99;
+        margin-top: 5px;
+        min-height: 150px;
+        border-radius: 20px;
     }
     .italian-button{
-        background-color: green;
-        background-size:contain;
-        background-position: 50% 50%;
-        background-repeat:no-repeat;
+        background-color: rgb(161, 252, 161);
+
+        .italian-flag{
+            width: 50px!important;
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width: "900px") {
+            margin-bottom: 20px;
+          }
     }    
     .english-button{
-        background-color:blue;
+        background-color: rgb(157, 155, 228);
+        .english-flag{
+            font-size: 1.5rem;
+            width: 50px!important;
+        }
+        @media screen and (max-width: "900px") {
+            margin-bottom: 20px;
+          }
+        
     }  
+
     .home-description{
         padding: 25px;
     }  
+
     .iframe-container{
-        margin:40px;
+        margin-top: 55px!important;
+        padding: 0!important;
     }
+
     .button-go-form{
         padding-top:150px;
-        margin-top:150px;
+        margin: 200px 0;
+        .btn-go-form{
+            padding: 25px;
+            font-size: 2rem;
+            font-weight: 800;
+            font-style: italic;
+        }
     }
 }    
 
+.myFooter{
+    margin-top: 15px;
+    background-color: $main-color;
+    font-weight: 600;
+    color:black;
+    min-height: 50px;
+    .Icons{
+        margin-top: 5px;
+    }
+    a {
+        color:black;
+    }
+
+}

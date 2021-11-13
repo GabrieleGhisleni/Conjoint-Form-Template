@@ -6,9 +6,13 @@
       padding-right: 0px !important;
       padding-left: 0px !important; } }
   .question-container .col-final-submit {
-    padding-bottom: 100px;
-    border-radius: 20px;
-    background-color: #b5f7b5; }
+    padding-top: 50px;
+    margin: 50px 0; }
+    .question-container .col-final-submit .btn-go-form {
+      padding: 25px;
+      font-size: 2rem;
+      font-weight: 800;
+      font-style: italic; }
   .question-container .attribute-names {
     font-style: italic; }
   .question-container .question-button-col {
@@ -41,33 +45,60 @@ body {
   font-family: "Roboto", sans-serif !important; }
 
 .main-container {
-  border-radius: 10px;
   padding: 0 3rem;
   overflow: hidden;
+  border-radius: 10px;
   background-color: #fae3e3 !important; }
   .main-container .container-div {
     padding: 30px; }
   .main-container .home-title {
     padding: 20px;
-    font-family: italic;
     font-weight: 500;
+    font-family: italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
   .main-container .home-image {
-    margin-top: 5px;
     width: 100%;
-    border-radius: 20px;
-    opacity: 0.99; }
+    opacity: 0.99;
+    margin-top: 5px;
+    min-height: 150px;
+    border-radius: 20px; }
   .main-container .italian-button {
-    background-color: green;
-    background-size: contain;
-    background-position: 50% 50%;
-    background-repeat: no-repeat; }
+    background-color: #a1fca1; }
+    .main-container .italian-button .italian-flag {
+      width: 50px !important;
+      font-size: 1.5rem; }
+    @media screen and (max-width: 900px) {
+      .main-container .italian-button {
+        margin-bottom: 20px; } }
   .main-container .english-button {
-    background-color: blue; }
+    background-color: #9d9be4; }
+    .main-container .english-button .english-flag {
+      font-size: 1.5rem;
+      width: 50px !important; }
+    @media screen and (max-width: 900px) {
+      .main-container .english-button {
+        margin-bottom: 20px; } }
   .main-container .home-description {
     padding: 25px; }
   .main-container .iframe-container {
-    margin: 40px; }
+    margin-top: 55px !important;
+    padding: 0 !important; }
   .main-container .button-go-form {
     padding-top: 150px;
-    margin-top: 150px; }
+    margin: 200px 0; }
+    .main-container .button-go-form .btn-go-form {
+      padding: 25px;
+      font-size: 2rem;
+      font-weight: 800;
+      font-style: italic; }
+
+.myFooter {
+  margin-top: 15px;
+  background-color: #f1c5ff !important;
+  font-weight: 600;
+  color: black;
+  min-height: 50px; }
+  .myFooter .Icons {
+    margin-top: 5px; }
+  .myFooter a {
+    color: black; }
