@@ -9,24 +9,23 @@ const Header = (props) => {
         <React.Fragment>
             <Row>
                 <Col xs='12'>
-                    <img src='/images/home3.jfif' className='home-image' alt='useless image'/>
+                    <img src='/images/home.jpg' className='home-image' alt='useless image' />
                 </Col>
             </Row>
             <div className='container-div'>
                 <Row>
-                    <Col xs='12' sm='8' >
+                    <Col xs='12' sm='auto' >
                         <h2 className='home-title' > {TEXT[props.lang].title}<br /><span style={{ fontSize: "1.5rem" }}>Conjoint Choice Based Survey</span></h2>
                     </Col>
-                    <Col xs='12' sm='auto' className='align-self-center text-center'>
-                    
+                    <Col xs='12' md='auto' className='align-self-center text-center'>
                         <Button onClick={() => props.langF('it')} className='italian-button'>
-                        <ReactCountryFlag countryCode="IT" svg className='italian-flag'/>
+                            <ReactCountryFlag countryCode="IT" svg className='italian-flag' />
                         </Button>
                         <Button onClick={() => props.langF('en')} className='english-button'>
-                        <ReactCountryFlag countryCode="GB" svg className="english-flag"/>
+                            <ReactCountryFlag countryCode="GB" svg className="english-flag" />
                         </Button>
                     </Col>
-                    <Col xs='12'>{TEXT[props.lang].description}</Col>
+                    <Col xs='12' className='home-description-text'><hr />{TEXT[props.lang].description}<hr /></Col>
                     <Col xs='12' className='text-center iframe-container'>
                         <h4>{TEXT[props.lang].title} {props.lang === 'it' ? <span>Dimostrazione</span> : <span>Showing off</span>}</h4>
                         <Iframe url={TEXT[props.lang].url}
@@ -36,15 +35,17 @@ const Header = (props) => {
                             allow="fullscreen" />
                     </Col>
                     <Col xs='12' className='text-center button-go-form'>
+                        <hr />
                         <Button color='success' className="btn-go-form" onClick={() => { document.getElementById('title').scrollIntoView({ behavior: "smooth" }) }}>
                             {props.lang === 'it' ? <span>Vai al questionario</span> : <span>Go to the Survey</span>}
                         </Button>
+                        <hr />
                     </Col>
                 </Row>
-                <hr />
+
             </div>
         </React.Fragment>
     )
 }
 
-export default Header
+export default Header;

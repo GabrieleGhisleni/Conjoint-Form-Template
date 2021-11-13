@@ -6,7 +6,7 @@
       padding-right: 0px !important;
       padding-left: 0px !important; } }
   .question-container .col-final-submit {
-    padding-top: 50px;
+    padding-top: 20px;
     margin: 50px 0; }
     .question-container .col-final-submit .btn-go-form {
       padding: 25px;
@@ -56,6 +56,12 @@ body {
     font-weight: 500;
     font-family: italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+  .main-container .home-description-text {
+    padding: 0 55px;
+    font-size: 1.1rem; }
+    @media screen and (max-width: 900px) {
+      .main-container .home-description-text {
+        padding: 0 15px; } }
   .main-container .home-image {
     width: 100%;
     opacity: 0.99;

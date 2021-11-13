@@ -11,7 +11,7 @@ $container-color: rgb(250, 227, 227)!important;
     
       }
     .col-final-submit{
-        padding-top:50px;
+        padding-top:20px;
         margin: 50px 0;
         .btn-go-form{
             padding: 25px;
@@ -73,6 +73,13 @@ body{
         font-weight: 500;
         font-family: italic;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .home-description-text{
+        padding: 0 55px;
+        font-size: 1.1rem;
+        @media screen and (max-width: "900px") {
+            padding: 0 15px;
+          }
     }
     .home-image{
         width: 100%;

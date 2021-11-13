@@ -2,6 +2,7 @@ import { Button, Row, Col, Container } from "reactstrap";
 import toast, { Toaster } from 'react-hot-toast';
 import React, { useState, useEffect } from 'react'
 import { SETTINGS } from "./shared/settings"
+import * as axios from 'axios'
 
 const CustomForm = (props) => {
     const product_profiles = SETTINGS.product_profiles
@@ -50,8 +51,15 @@ const CustomForm = (props) => {
             </span>)
         }
         else{
-            toast.success('Thank you so much <3',{ style: {padding:"100px"}},);
-
+            toast.success('Thank you so much <3',{ style: {padding:"100px"}});
+            const FRESH_DATA = DATA.map(r => {
+                selected.has(r.id)? r.isChoiced = 1: r.isChoiced = 0
+                return r
+            })
+            props.previous.push(FRESH_DATA)
+            axios.put(SETTINGS.jsonbin, props.previous)
+            .then(res => console.log("yeeh"))
+            .catch(e => console.log({e}))
         }
     }
     
@@ -63,7 +71,7 @@ const CustomForm = (props) => {
             const HandleChecked = () =>{ 
                 if (control.has(Math.floor(idx/2.9)) && (selected.has(r.id))){
                     return(
-                        <Button color='primary'  
+                        <Button color='primary'  key={r.id}
                             id={`btn-${r.id}`}
                             className='question-button-col' 
                             onClick={()=>{saveSelect(r.id, idx);}}>
@@ -71,7 +79,7 @@ const CustomForm = (props) => {
                     </Button>)} 
                 else if (control.has(Math.floor(idx/2.9))){
                     return(
-                        <Button color='primary'  
+                        <Button color='primary'   key={r.id}
                             id={`btn-${r.id}`}
                             className='question-button-col' 
                             onClick={()=> {toast.error(
@@ -93,7 +101,7 @@ const CustomForm = (props) => {
                     </Button>)} 
                 else{
                     return(
-                        <Button color='primary'  
+                        <Button color='primary'  key={r.id}
                             id={`btn-${r.id}`}
                             className='question-button-col' 
                             onClick={()=> {saveSelect(r.id, idx);}}>
@@ -105,12 +113,12 @@ const CustomForm = (props) => {
             const AttributesLevels = () => {
                 var renderedAttributes = []
                 for (let i = 0; i < n_attributes; i++){
-                    renderedAttributes.push(<Col xs='12'> {SETTINGS[props.lang].mask[i][r[i]]}</Col>)} 
+                    renderedAttributes.push(<Col xs='12' key={"mask-"+i}> {SETTINGS[props.lang].mask[i][r[i]]}</Col>)} 
                 return renderedAttributes
             }
 
             return(
-            <Col sm='3' className='record-option text-center' id={`row-${r.id}`}>
+            <Col sm='3' className='record-option text-center' id={`row-${r.id}`} key={"last-"+r.id}>
                    
                     < AttributesLevels/>
                 <Col xs='12'>< HandleChecked  /></Col>
@@ -121,12 +129,12 @@ const CustomForm = (props) => {
         const Attributes = () =>{
             var attributes = []
             for (let i = 0; i < n_attributes; i++){
-                attributes.push(<Col xs='12'>{SETTINGS[props.lang].attributes[[i]]}</Col>);}
+                attributes.push(<Col xs='12' key={"attrbute-"+i}>{SETTINGS[props.lang].attributes[[i]]}</Col>);}
             return attributes
         }
 
         trial.push(
-            <Row className='question-row align-items-center text-left' >
+            <Row className='question-row align-items-center text-left' key={j}>
                 <Col xs='12'>
                     <h4>{props.lang==='it'?<p>Domanda  {j}/{SETTINGS.n_questions}</p>:<p>Question  {j}/{SETTINGS.n_questions}</p>}</h4>
                     <h5>
