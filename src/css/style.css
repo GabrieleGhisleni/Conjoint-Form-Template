@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap");
 .question-container {
-  margin-top: 100vh; }
+  margin-top: 60vh; }
   @media screen and (max-width: 900px) {
     .question-container {
       padding-right: 0px !important;
