@@ -6,10 +6,12 @@ import { SETTINGS } from "./shared/settings"
 const CustomForm = (props) => {
     const product_profiles = SETTINGS.product_profiles
     const n_attributes = SETTINGS.n_attributes
+    const n_question = SETTINGS.n_questions
     const DATA = props.data
 
     const [selected, setselected] = useState(new Set())
     const [control, setcontrol] = useState(new Set())
+    const [row, setRow] = useState(0)
     var [j, trial] = [0, [], []];
 
     if (DATA.length % product_profiles !== 0) alert("Number of questions wrong!")  
@@ -23,8 +25,8 @@ const CustomForm = (props) => {
             btn.innerText='Deselect'
             })})
 
-    function saveSelect(id){
-        var row_check = Math.floor(id/2.9)
+    function saveSelect(id, idx){
+        var row_check = Math.floor(idx/2.9)
         if (selected.has(id)){
             let box = document.getElementById(`row-${id}`)
             box.style.backgroundColor = "rgb(250, 227, 227)"
@@ -36,23 +38,35 @@ const CustomForm = (props) => {
     }
 
     function onFinalSubmit(){
-        console.log(selected)
+        if (selected.size < n_question) {
+            var missing = []
+            for (let i=0; i < n_question; i++){if (!control.has(i)) missing.push(i)}
+            toast.error(
+            <span>
+                {props.lang==='it'?
+                <span>Devi rispondere a tutte le domande, mancano le domande numero: <br/><br/> {missing.join(', ')}
+                </span>:
+                <span>Missing the following answers <br/><br/> {missing.join(', ')}</span>}
+            </span>)
+        }
+        else{
+            toast.success('Thank you so much <3',{ style: {padding:"100px"}},);
+
+        }
     }
     
+
     for (let idx = 0; idx < DATA.length; idx+=3){
         j++
-
         const options = DATA.slice(idx, idx+ product_profiles)
         const renderedOptions = options.map( r => { 
-
             const HandleChecked = () =>{ 
-                console.log(control)
                 if (control.has(Math.floor(idx/2.9)) && (selected.has(r.id))){
                     return(
                         <Button color='primary'  
                             id={`btn-${r.id}`}
                             className='question-button-col' 
-                            onClick={()=>{saveSelect(r.id);}}>
+                            onClick={()=>{saveSelect(r.id, idx);}}>
                             {props.lang==='it'?<span>Seleziona</span>:<span>Select</span>}
                     </Button>)} 
                 else if (control.has(Math.floor(idx/2.9))){
@@ -60,7 +74,21 @@ const CustomForm = (props) => {
                         <Button color='primary'  
                             id={`btn-${r.id}`}
                             className='question-button-col' 
-                            onClick={()=> {alert("Deseleziona First");}}>
+                            onClick={()=> {toast.error(
+                                <span>
+                                {props.lang==='it'? 
+                                <span>
+                                    Numero massimo di scelte è 1 per domanda<br/><br/>
+                                    Se vuoi modificare la tua scelta deseleziona 
+                                    ciò che hai già selezionato.
+                                </span>:
+                                <span>
+                                    Maximum Choice per question is 1 <br/>
+                                    Deselect first the other option.
+                                </span>}
+                                </span>, { style: {backgroundColor:"rgb(238, 117, 117)"}}
+         
+                            )}}>
                             {props.lang==='it'?<span>Seleziona</span>:<span>Select</span>}
                     </Button>)} 
                 else{
@@ -68,8 +96,9 @@ const CustomForm = (props) => {
                         <Button color='primary'  
                             id={`btn-${r.id}`}
                             className='question-button-col' 
-                            onClick={()=> {saveSelect(r.id);}}>
+                            onClick={()=> {saveSelect(r.id, idx);}}>
                             {props.lang==='it'?<span>Seleziona</span>:<span>Select</span>}
+
                     </Button>
                 )}}
            
@@ -82,8 +111,9 @@ const CustomForm = (props) => {
 
             return(
             <Col sm='3' className='record-option text-center' id={`row-${r.id}`}>
+                   
                     < AttributesLevels/>
-                <Col xs='12'>< HandleChecked /></Col>
+                <Col xs='12'>< HandleChecked  /></Col>
             </Col>
         )})
 
@@ -118,6 +148,7 @@ const CustomForm = (props) => {
 
     return (
         <Container className='text-center question-container'>
+             <Toaster />
             <h1 className='questionario-title' id='title'>
                 {props.lang==='it'? <span>Questionario</span>: <span>Survey</span> }
             </h1>
