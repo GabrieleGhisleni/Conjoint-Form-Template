@@ -1,5 +1,5 @@
 export const SETTINGS = {
-    jsonbin: "https://api.jsonbin.io/b/<your_bin_id>/",
+    jsonbin: "<your_api_key>",
     product_profiles:3,
     n_attributes:5,
     n_questions:15, 
@@ -16,8 +16,8 @@ export const SETTINGS = {
             0: {0:'Web App', 1:'Mobile App'},
             1: {0:'Grafiche avanzate', 1:'Grafiche base'},
             2: {0:'Categorie 5 ', 1:'Categorie 10', 2:'Categorie 15'},
-            3: {0:'Sottocategorie 5', 1:'Sottocategorie  10', 2:'Sottocategorie  15'},
-            4: {0:'5$', 1:'10$', 2:'15$'},
+            3: {0:'Sottocategorie 10', 1:'Sottocategorie  20', 2:'Sottocategorie  50'},
+            4: {0:'Gratis', 1:'1$/month', 2:'Once 5$'},
         }
     },
 

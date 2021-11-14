@@ -23,7 +23,6 @@ class  Main extends Component {
     }
     
     render() { 
-        console.log(this.state.previous)
         const DATA = data.default
         const SHUFFLE_DATA = shuffle_data(DATA)
         return ( 

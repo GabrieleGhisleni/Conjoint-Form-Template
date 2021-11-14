@@ -1,50 +1,113 @@
-export const TEXT =
-{
+const width = window.innerWidth < 800 ? <span><br/></span> : null;
+
+export const TEXT = {
     en: {
-        title: <span>Economies|</span>, 
-        description:
+        title: <span>Economies|</span>,
+        description: (
             <span>
                 Hi, thank you to be here.
                 <br />
-                The following questions are tought to understand the more important
+                The following questions are thought to understand the more important
                 features for 'Economies' which is an application made for handle the
-                domestic economies. The features are illustrated into the video tutorial that will show you
-                the basics of the application.
-                <br /><br />
-                The alternative that you will choice among are:
-                <ol>
-                    <li> Web Application (mobile friendly) Vs. Smartphone application (to install on the phone) </li>
-                    <li> Details of the analytical dashboard: Advanced vs Basic (more example in the video) </li>
-                    <li> Max number of categories that can be created: 5, 10, 20  </li>
-                    <li> Max number of sub categories that can be created: 15, 25, 500  </li>
-                    <li> Price: gratis, 1$/month, 5$/for always  </li>
-                </ol>
+                domestic economies. Below you can find the main features that you are 
+                going to rate and also a video (highly recommended, ~ 2m) showing off them. 
+                <br /> <br />
+                These features are:
+                <ul>
+                    <li> Device
+                        <ol> 
+                            <li> Web Application (mobile friendly, but have to browse on google) </li>
+                            <li> Smartphone application (installed in your device)  </li>
+                        </ol>
+                    </li> <br/>
+                    <li> Analytical Dashboard
+                        <ol> 
+                            <li> Advanced Graphics (All the graphics shown in "Dashboard" during the video) </li>
+                            <li> Basic graphics (Only the month summary pie chart in "Summary")  </li>
+                        </ol>
+                    </li><br/>
+                    <li> Number of Categories that can be created
+                        <ol> 
+                            <li> Custom categories  5</li>
+                            <li> Custom categories 10 </li>
+                            <li> Custom categories 15</li>
+                        </ol>
+                    </li><br/>
+                    <li> Number of SubCategories that can be created
+                        <ol> 
+                            <li> Custom subcategories  10</li>
+                            <li> Custom subcategories 20 </li>
+                            <li> Custom subcategories 50</li>
+                        </ol>
+                    </li><br/>
+                    <li>Price
+                        <ol> 
+                            <li> Completely Free </li>
+                            <li> Monthly fee of 1$ </li>
+                            <li> Once 5$ </li>
+                        </ol>
+                    </li><br/>
+                </ul>
                 The time to complete the form is estimated ~ 9 m.
-            </span>,
+            </span>
+        ),
         h2: <span>Video Tutorial</span>,
         url: "https://www.youtube.com/embed/FLH7PnAUsLY",
     },
     it: {
-        title: <span>Economies|</span>, 
-        description:
+        title: <span>Economies|</span>,
+        description: (
             <span>
-                Ciao, grazie per essere qui!
+                Ciao, grazie per essere qui.
                 <br />
-                Le domande seguenti sono pensante per comprendere meglio quali caratteristiche
-                un'applicazione per la gestione delle finanze domestiche sono di maggior rilevanza.
-                Le caratteristiche fra quali dovrete scegliere sono:
-                <br /><br />
-
+                Le seguenti domande sono pensate per comprendere quali possono essere 
+                le features più importanti per un applicazione finalizzata alla gestione 
+                delle applicazioni domestiche. Di seguito sono illustrate ciò che sono
+                state identificate come tali (è inoltre presente un video illustrativo,
+                The following questions are thought to understand the more important
+                raccomandato dalla durata di circa ~2m)
+                <br /> <br />
+                Le features sono:
                 <ul>
-                    <li> Web Application (mobile friendly) Vs. Smartphone application (intallata su smartphone) </li><br/>
-                    <li> Dettagli della dashboard analiltica: Avanzati vs base (meglio spiegato nel video) </li><br/>
-                    <li> Numero massimo di categorie che possono essere create: 5, 10, 20  </li><br/>
-                    <li> Numero massimo di sottocategorie che possono essere create: 15, 25, 500  </li><br/>
-                    <li> Prezzo: gratis, 1$/mese, 5$/per sempre  </li><br/>
+                    <li> Piattaforma
+                        <ol> 
+                            <li> Applicazione Web (mobile friendly, ma necessità di aprire il browser) </li>
+                            <li> Applicazione installabile su smartphone  </li>
+                        </ol>
+                    </li> <br/>
+                    <li> Analytical Dashboard
+                        <ol> 
+                            <li> Grafiche avanzate (Tutte le grafiche mostrate nel video di sotto) </li>
+                            <li> Grafiche base (Solamente il grafico nella sezione "Summary")  </li>
+                        </ol>
+                    </li><br/>
+                    <li> Numero massimo di categorie creabili
+                        <ol>
+                            <li> Categorie personali consentite  5</li>
+                            <li>  Categorie personali consentite 10 </li>
+                            <li>  Categorie personali consentite 15</li>
+                        </ol>
+                    </li><br/>
+                    <li> Numero massimo di sottocategorie creabili
+                        <ol> 
+                            <li> SottoCategorie personali consentite  10</li>
+                            <li> SottoCategorie personali consentite 20 </li>
+                            <li> SottoCategorie personali consentite 50</li>
+                        </ol>
+                    </li><br/>
+
+                    <li>Prezzo
+                        <ol> 
+                            <li> Gratis </li>
+                            <li> Prezzo mensile di 1$ </li>
+                            <li> Prezzo unico per sempre 5$ </li>
+                        </ol>
+                    </li><br/>
                 </ul>
-                La durata di compilazione è di circa 9 minuti.
-            </span>,
+               Il tempo di completamento del form è di circa 9 m + 2 di video.
+            </span>
+        ),
         h2: <span>Video Tutorial</span>,
-        url:  "https://www.youtube.com/embed/FLH7PnAUsLY",
+        url: "https://www.youtube.com/embed/FLH7PnAUsLY",
     },
-}
+};
