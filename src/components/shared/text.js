@@ -22,7 +22,7 @@ export const TEXT =
                 The time to complete the form is estimated ~ 9 m.
             </span>,
         h2: <span>Video Tutorial</span>,
-        url: "https://www.youtube.com/embed/t8A34g9Csag",
+        url: "https://www.youtube.com/embed/FLH7PnAUsLY",
     },
     it: {
         title: <span>Economies|</span>, 
@@ -45,6 +45,6 @@ export const TEXT =
                 La durata di compilazione è di circa 9 minuti.
             </span>,
         h2: <span>Video Tutorial</span>,
-        url:  "https://www.youtube.com/embed/t8A34g9Csag",
+        url:  "https://www.youtube.com/embed/FLH7PnAUsLY",
     },
 }
