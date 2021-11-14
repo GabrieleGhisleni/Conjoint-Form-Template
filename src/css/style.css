@@ -14,7 +14,11 @@
       font-weight: 800;
       font-style: italic; }
   .question-container .attribute-names {
-    font-style: italic; }
+    font-style: italic;
+    padding-bottom: 2rem; }
+    @media screen and (max-width: 900px) {
+      .question-container .attribute-names {
+        padding-bottom: .5rem; } }
   .question-container .question-button-col {
     margin-top: 1.5rem; }
   .question-container .questionario-title {

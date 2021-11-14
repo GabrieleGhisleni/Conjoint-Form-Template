@@ -22,6 +22,10 @@ $container-color: rgb(250, 227, 227)!important;
     }
     .attribute-names{
         font-style: italic;
+        padding-bottom: 2rem;
+        @media screen and (max-width: "900px") {
+            padding-bottom: .5rem;
+          }
     }
     .question-button-col{
         margin-top: 1.5rem;

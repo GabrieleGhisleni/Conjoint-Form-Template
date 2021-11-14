@@ -22,7 +22,7 @@ export const TEXT =
                 The time to complete the form is estimated ~ 9 m.
             </span>,
         h2: <span>Video Tutorial</span>,
-        url: "https://youtu.be/t8A34g9Csag",
+        url: "https://www.youtube.com/embed/t8A34g9Csag",
     },
     it: {
         title: <span>Economies|</span>, 
@@ -35,16 +35,16 @@ export const TEXT =
                 Le caratteristiche fra quali dovrete scegliere sono:
                 <br /><br />
 
-                <ol>
-                    <li> Web Application (mobile friendly) Vs. Smartphone application (intallata su smartphone) </li>
-                    <li> Dettagli della dashboard analiltica: Avanzati vs base (meglio spiegato nel video) </li>
-                    <li> Numero massimo di categorie che possono essere create: 5, 10, 20  </li>
-                    <li> Numero massimo di sottocategorie che possono essere create: 15, 25, 500  </li>
-                    <li> Prezzo: gratis, 1$/mese, 5$/per sempre  </li>
-                </ol>
+                <ul>
+                    <li> Web Application (mobile friendly) Vs. Smartphone application (intallata su smartphone) </li><br/>
+                    <li> Dettagli della dashboard analiltica: Avanzati vs base (meglio spiegato nel video) </li><br/>
+                    <li> Numero massimo di categorie che possono essere create: 5, 10, 20  </li><br/>
+                    <li> Numero massimo di sottocategorie che possono essere create: 15, 25, 500  </li><br/>
+                    <li> Prezzo: gratis, 1$/mese, 5$/per sempre  </li><br/>
+                </ul>
                 La durata di compilazione è di circa 9 minuti.
             </span>,
         h2: <span>Video Tutorial</span>,
-        url: "https://youtu.be/t8A34g9Csag",
+        url:  "https://www.youtube.com/embed/t8A34g9Csag",
     },
 }

@@ -119,9 +119,10 @@ const CustomForm = (props) => {
 
             return(
             <Col sm='3' className='record-option text-center' id={`row-${r.id}`} key={"last-"+r.id}>
-                   
-                    < AttributesLevels/>
-                <Col xs='12'>< HandleChecked  /></Col>
+                < AttributesLevels/>
+            <Col xs='12'>
+                < HandleChecked  />
+                </Col>
             </Col>
         )})
 
