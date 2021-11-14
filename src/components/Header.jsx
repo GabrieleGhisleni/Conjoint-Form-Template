@@ -9,7 +9,7 @@ const Header = (props) => {
         <React.Fragment>
             <Row>
                 <Col xs='12'>
-                    <img src="home.jpg" className='home-image' alt='useless image' />
+                    <img src= {process.env.PUBLIC_URL+"/home.jpg"} className='home-image' alt='useless image'/>
                 </Col>
             </Row>
             <div className='container-div'>
