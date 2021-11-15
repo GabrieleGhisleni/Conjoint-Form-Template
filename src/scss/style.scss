@@ -71,6 +71,9 @@ body{
     background-color: $container-color;
     .container-div{
         padding: 30px;
+        @media screen and (max-width: "900px") {
+            padding: 1rem;
+          }
     }
     .home-title{
         padding: 20px;
@@ -81,8 +84,9 @@ body{
     .home-description-text{
         padding: 0 55px;
         font-size: 1.1rem;
+        text-align: left;
         @media screen and (max-width: "900px") {
-            padding: 0 15px;
+            padding: 0.1rem;
           }
     }
     .home-image{

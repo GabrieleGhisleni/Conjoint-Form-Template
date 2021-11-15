@@ -7,10 +7,12 @@ export const TEXT = {
             <span>
                 Hi, thank you to be here.
                 <br />
+                
                 The following questions are thought to understand the more important
                 features for 'Economies' which is an application made for handle the
                 domestic economies. Below you can find the main features that you are 
                 going to rate and also a video (highly recommended, ~ 2m) showing off them. 
+                
                 <br /> <br />
                 These features are:
                 <ul>

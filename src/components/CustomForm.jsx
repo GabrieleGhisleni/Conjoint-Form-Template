@@ -144,7 +144,7 @@ const CustomForm = (props) => {
                         </h5>
                 </Col>
                 <Col sm='3' className='attribute-names text-center'>
-                    <h6>Gli attributi si riferiscono in ordine a:</h6>
+                    <h6>{props.lang==='it'?<p>Gli attributi si riferiscono a</p>:<p>The attributes refer to:</p>}</h6>
                     <Attributes/>
                     {window.innerWidth>800? <Col xs='12' className='question-button-col'>&nbsp;</Col>:null}
                 </Col>

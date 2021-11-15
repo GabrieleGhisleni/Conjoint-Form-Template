@@ -55,6 +55,9 @@ body {
   background-color: #fae3e3 !important; }
   .main-container .container-div {
     padding: 30px; }
+    @media screen and (max-width: 900px) {
+      .main-container .container-div {
+        padding: 1rem; } }
   .main-container .home-title {
     padding: 20px;
     font-weight: 500;
@@ -62,10 +65,11 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
   .main-container .home-description-text {
     padding: 0 55px;
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    text-align: left; }
     @media screen and (max-width: 900px) {
       .main-container .home-description-text {
-        padding: 0 15px; } }
+        padding: 0.1rem; } }
   .main-container .home-image {
     width: 100%;
     opacity: 0.99;
