@@ -2,7 +2,7 @@ export const SETTINGS = {
     jsonbin: "<your_api_kei>",
     product_profiles:3,
     n_attributes:5,
-    n_questions:1, 
+    n_questions:15, 
 
     it: {
         attributes: {
