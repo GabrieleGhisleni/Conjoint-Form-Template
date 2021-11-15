@@ -28,8 +28,8 @@ class  Main extends Component {
         return ( 
         <React.Fragment>
             <Container className='main-container'>
-            <Header lang={this.state.lang} langF={this.changeLang}/>
-            <CustomForm lang={this.state.lang} data={SHUFFLE_DATA} previous={this.state.previous}/>
+                <Header lang={this.state.lang} langF={this.changeLang}/>
+                <CustomForm lang={this.state.lang} data={SHUFFLE_DATA} previous={this.state.previous}/>
             </Container>
             <Footer />
         </React.Fragment>  );

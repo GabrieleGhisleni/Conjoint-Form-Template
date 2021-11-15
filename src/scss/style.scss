@@ -72,7 +72,7 @@ body{
     .container-div{
         padding: 30px;
         @media screen and (max-width: "900px") {
-            padding: 1rem;
+            padding: 0.3rem;
           }
     }
     .home-title{
@@ -86,7 +86,7 @@ body{
         font-size: 1.1rem;
         text-align: left;
         @media screen and (max-width: "900px") {
-            padding: 0.1rem;
+            padding: 0.3rem;
           }
     }
     .home-image{
