@@ -1,4 +1,3 @@
-const width = window.innerWidth < 800 ? <span><br/></span> : null;
 
 export const TEXT = {
     en: {

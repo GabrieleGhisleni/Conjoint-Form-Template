@@ -69,11 +69,11 @@ body{
     overflow: hidden;
     border-radius: 10px;
     background-color: $container-color;
+    @media screen and (max-width: "900px") {
+        padding: 0 1.2rem;
+      }
     .container-div{
         padding: 30px;
-        @media screen and (max-width: "900px") {
-            padding: 0.1rem;
-          }
     }
     .home-title{
         padding: 20px;

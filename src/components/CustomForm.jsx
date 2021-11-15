@@ -5,6 +5,7 @@ import { SETTINGS } from "./shared/settings"
 import * as axios from 'axios'
 
 const CustomForm = (props) => {
+
     const product_profiles = SETTINGS.product_profiles
     const n_attributes = SETTINGS.n_attributes
     const n_question = SETTINGS.n_questions
@@ -12,7 +13,6 @@ const CustomForm = (props) => {
 
     const [selected, setselected] = useState(new Set())
     const [control, setcontrol] = useState(new Set())
-    const [row, setRow] = useState(0)
     var [j, trial] = [0, [], []];
 
     if (DATA.length % product_profiles !== 0) alert("Number of questions wrong!")  
@@ -51,15 +51,19 @@ const CustomForm = (props) => {
             </span>)
         }
         else{
-            toast.success('Thank you so much <3',{ style: {padding:"100px"}});
             const FRESH_DATA = DATA.map(r => {
                 selected.has(r.id)? r.isChoiced = 1: r.isChoiced = 0
                 return r
             })
-            props.previous.push(FRESH_DATA)
-            axios.put(SETTINGS.jsonbin, props.previous)
-            .then(res => console.log("yeeh"))
-            .catch(e => console.log({e}))
+
+            axios.get(SETTINGS.jsonbin+"latest")
+                .then(res => {
+                    var prev = res.data
+                    prev.push(FRESH_DATA)
+                    axios.put(SETTINGS.jsonbin, prev)
+                        .then(toast.success('Thank you so much <3', {style: {padding:"100px"}}))
+                        .catch(e => console.log({e}))})
+                .catch(e =>  alert("Ops something went wrong! be sure that you starting JSONbin is an empty list. Error -> " +  JSON.stringify(e.message)))
         }
     }
     

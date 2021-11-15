@@ -18,7 +18,7 @@ class  Main extends Component {
     changeLang(val){this.setState({lang:val})}
     componentDidMount(){
         axios.get(SETTINGS.jsonbin+"latest")
-        .then(res => this.setState({previous: res.data}))
+        .then(res => "")
         .catch(e => {alert("JSON BIN WRONG")})
     }
     
@@ -29,7 +29,7 @@ class  Main extends Component {
         <React.Fragment>
             <Container className='main-container'>
                 <Header lang={this.state.lang} langF={this.changeLang}/>
-                <CustomForm lang={this.state.lang} data={SHUFFLE_DATA} previous={this.state.previous}/>
+                <CustomForm lang={this.state.lang} data={SHUFFLE_DATA}/>
             </Container>
             <Footer />
         </React.Fragment>  );

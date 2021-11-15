@@ -53,11 +53,11 @@ body {
   overflow: hidden;
   border-radius: 10px;
   background-color: #fae3e3 !important; }
+  @media screen and (max-width: 900px) {
+    .main-container {
+      padding: 0 1.2rem; } }
   .main-container .container-div {
     padding: 30px; }
-    @media screen and (max-width: 900px) {
-      .main-container .container-div {
-        padding: 0.1rem; } }
   .main-container .home-title {
     padding: 20px;
     font-weight: 500;
