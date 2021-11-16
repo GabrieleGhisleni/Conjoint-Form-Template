@@ -26,7 +26,8 @@ const Header = (props) => {
                         </Button>
                     </Col>
                     <Col xs='12' className='home-description-text'><hr />{TEXT[props.lang].description}<hr /></Col>
-                    <Col xs='12' className='text-center iframe-container'>   
+                    <Col xs='12' className='text-center iframe-container'>
+                           
                         <iframe 
                         title="description"
                         frameborder="0" 

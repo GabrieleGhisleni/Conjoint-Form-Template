@@ -1,7 +1,7 @@
 
 export const TEXT = {
     en: {
-        title: <span>Economies|</span>,
+        title: <span>Economies| Web App</span>,
         description: (
             <span>
                 Hi, thank you to be here.
@@ -10,7 +10,14 @@ export const TEXT = {
                 The following questions are thought to understand the more important
                 features for 'Economies' which is an application made for handle the
                 domestic economies. Below you can find the main features that you are 
-                going to rate and also a video (highly recommended, ~ 2m) showing off them. 
+                going to rate and also a video (highly recommended, ~ 2m) showing off them.
+                <br/><br/>
+                Otherwhise you can have a look by yourself here: &nbsp;
+                <a 
+                target='_blank'
+                href='https://smart-economies.herokuapp.com/home' 
+                style={{color:"purple", fontWeight:"bold", fontStyle:"italic"}}>
+                    Economies</a> 
                 
                 <br /> <br />
                 These features are:
@@ -73,12 +80,12 @@ export const TEXT = {
             </span>
         ),
         h2: <span>Video Tutorial</span>,
-        url: "https://www.youtube.com/embed/9VYxizPCAZw",
+        url: "https://www.youtube.com/embed/9jusKbecLaQ",
     },
 
     // /////////////////////////////////////////////////////////// IT
     it: {
-        title: <span>Economies|</span>,
+        title: <span>Economies| Web App</span>,
         description: (
             <span>
                 Ciao, grazie per essere qui.
@@ -88,6 +95,13 @@ export const TEXT = {
                 delle finanze domestiche. Di seguito sono illustrate quelle che sono
                 state identificate come tali (è inoltre presente un video illustrativo
                 raccomandato dalla durata di circa 2 minuti).
+                <br/><br/>
+                Oppure puoi dare un'occhiata tu stesso all'app qui: &nbsp;
+                <a 
+                href='https://smart-economies.herokuapp.com/home' 
+                target='_blank'
+                style={{color:"purple", fontWeight:"bold", fontStyle:"italic"}}>
+                    Economies</a> 
                 <br /> <br />
                 Le features sono:
                 <ul>
@@ -148,6 +162,6 @@ export const TEXT = {
             </span>
         ),
         h2: <span>Video Tutorial</span>,
-        url: "https://www.youtube.com/embed/9VYxizPCAZw",
+        url: "https://www.youtube.com/embed/9jusKbecLaQ",
     },
 };
