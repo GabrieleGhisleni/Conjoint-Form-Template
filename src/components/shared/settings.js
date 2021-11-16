@@ -1,5 +1,5 @@
 export const SETTINGS = {
-    jsonbin: "<your_api_kei>",
+    jsonbin: "https://api.jsonbin.io/b/618d6486763da443125f8109/",
     product_profiles:3,
     n_attributes:6,
     n_questions:15 ,

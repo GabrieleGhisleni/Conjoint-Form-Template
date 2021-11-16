@@ -26,16 +26,16 @@ const Header = (props) => {
                         </Button>
                     </Col>
                     <Col xs='12' className='home-description-text'><hr />{TEXT[props.lang].description}<hr /></Col>
+                         <Col xs='12'> <h5 style={{textAlign:"center"}}>Video Tutorial</h5> </Col>
                     <Col xs='12' className='text-center iframe-container'>
-                           
                         <iframe 
                         title="description"
                         frameborder="0" 
                         scrolling="no"
                         marginheight="0"
-                        width="443" 
+                        width="50%" 
                         style={{borderRadius:"20px"}}
-                        height="443" 
+                        height="150%" 
                         type="text/html" 
                         allow='fullscreen'
                         src= {TEXT[props.lang].url+"?fs=1&iv_load_policy=3&showinfo=0"}>

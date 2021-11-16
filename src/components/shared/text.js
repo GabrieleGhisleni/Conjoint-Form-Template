@@ -1,7 +1,7 @@
 
 export const TEXT = {
     en: {
-        title: <span>Economies| Web App</span>,
+        title: <span>Economies</span>,
         description: (
             <span>
                 Hi, thank you to be here.
@@ -19,16 +19,15 @@ export const TEXT = {
                 style={{color:"purple", fontWeight:"bold", fontStyle:"italic"}}>
                     Economies</a> 
                 
-                <br /> <br />
+                <br />
                 These features are:
-                <ul>
-                    <li> Device
+                    <br/><br/>&#8226; Device
                         <ol> 
                             <li> Web Application (mobile friendly, but have to browse on google) </li>
                             <li> Smartphone application (installed in your device)  </li>
                         </ol>
-                    </li> <br/>
-                    <li> Analytical Dashboard
+                    <br/>
+                    &#8226; Analytical Dashboard
                         <ol> 
                             <li> Advanced Graphics (All the graphics shown in "Dashboard" during the video) </li>
                             <div className='text-center'>
@@ -46,14 +45,14 @@ export const TEXT = {
                         </div>
 
                         </ol>
-                    </li><br/>
-                    <li> Number of Categories that can be created.
+                    <br/>
+                    &#8226; Number of Categories that can be created.
                         <ol> 
                             <li> Custom categories  5</li>
                             <li> Custom categories 10 </li>
                             <li> Custom categories 15</li>
                         </ol>
-                    </li><br/>
+                    <br/>
                     <li> Number of SubCategories that can be created.
                         <ol> 
                             <li> Custom subcategories  10</li>
@@ -61,22 +60,23 @@ export const TEXT = {
                             <li> Custom subcategories 50</li>
                         </ol>
                     </li><br/>
-                    <li>Recurrent Transaction
+                    &#8226; Recurrent Transaction
                         <ol> 
                             <li> Possibility to insert transaction as recurrent, so the app will upload  automatically the 
                                 cost at each expiration time, like each first of month register the rent cost.  </li>
                             <li> No Recurrent Transaction. </li>
                         </ol>
-                    </li><br/>
-                    <li>Price
+                    <br/>
+                    &#8226; Price
                         <ol>
-                        <li> 0$/month (Gratis). </li>
-                            <li> 1$/month.</li>
-                            <li> 3$/month.</li>
+                        <li> 1$/month. </li>
+                            <li> 2$/month.</li>
+                            <li> 5$/month.</li>
                         </ol>
-                    </li><br/>
-                </ul>
-                The time to complete the form is estimated ~ 9 m.
+                    <br/>
+                
+                The time to complete the form is estimated ~ 9 m.<br/><br/>
+                PS: Try when answering to assume that you are interested in a similar product even if you are not :D
             </span>
         ),
         h2: <span>Video Tutorial</span>,
@@ -85,7 +85,7 @@ export const TEXT = {
 
     // /////////////////////////////////////////////////////////// IT
     it: {
-        title: <span>Economies| Web App</span>,
+        title: <span>Economies</span>,
         description: (
             <span>
                 Ciao, grazie per essere qui.
@@ -104,14 +104,14 @@ export const TEXT = {
                     Economies</a> 
                 <br /> <br />
                 Le features sono:
-                <ul>
-                    <li> Piattaforma
+                
+                &#8226; Piattaforma
                         <ol> 
                             <li> Applicazione Web (mobile friendly, ma necessità di aprire il browser). </li>
                             <li> Applicazione installabile su smartphone.  </li>
                         </ol>
-                    </li> <br/>
-                    <li> Analytical Dashboard
+                    <br/>
+                    &#8226; Analytical Dashboard
                         <ol> 
                             <li> Grafiche avanzate (Tutte le grafiche mostrate nel video di sotto, incluse quelle base). </li>
                         <div className='text-center'>
@@ -128,37 +128,39 @@ export const TEXT = {
                                 alt='dashboard'/>
                         </div>
                         </ol>
-                    </li><br/>
-                    <li> Numero massimo di categorie creabili.
+                    <br/>
+                    &#8226;  Numero massimo di categorie creabili.
                         <ol>
                             <li> Categorie personali consentite  5.</li>
                             <li>  Categorie personali consentite 10. </li>
                             <li>  Categorie personali consentite 15.</li>
                         </ol>
-                    </li><br/>
-                    <li> Numero massimo di sottocategorie creabili.
+                    <br/>
+                    &#8226;  Numero massimo di sottocategorie creabili.
                         <ol> 
                             <li> SottoCategorie personali consentite  10.</li>
                             <li> SottoCategorie personali consentite 20. </li>
                             <li> SottoCategorie personali consentite 50.</li>
                         </ol>
-                    </li><br/>
-                    <li>Transazioni Ricorrenti
+                    <br/>
+                    &#8226;  Transazioni Ricorrenti
                         <ol> 
                             <li> Gestione automatica delle transazioni ricorrenti (come affitto etc.), 
                                 una volta specificate come tali in fase di inserimento, l'app provvederà a registrare il pagamento ad ogni scadenza.  </li>
                             <li> No transazioni ricorrenti. </li>
                         </ol>
-                    </li><br/>
-                    <li>Prezzo
+                    <br/>
+                    &#8226;  Prezzo
                         <ol> 
-                            <li> 0$/mese (Gratis). </li>
-                            <li> 1$/mese.</li>
-                            <li> 3$/mese.</li>
+                            <li> 1$/mese. </li>
+                            <li> 2$/mese.</li>
+                            <li> 5$/mese.</li>
                         </ol>
-                    </li><br/>
-                </ul>
+                    <br/>
+                
                Il tempo di completamento del form è di circa 9 minuti + 2 di video.
+               <br/><br/>
+               PS: Mentre rispondi cerca di metterti nei panni di un consumatore il quale è interessato a un prodotto simile, anche se non lo sei :D
             </span>
         ),
         h2: <span>Video Tutorial</span>,

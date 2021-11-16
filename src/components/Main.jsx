@@ -17,9 +17,9 @@ class  Main extends Component {
 
     changeLang(val){this.setState({lang:val})}
     componentDidMount(){
-        axios.get(SETTINGS.jsonbin+"latest")
-        .then(res => "")
-        .catch(e => {alert("JSON BIN WRONG")})
+        // axios.get(SETTINGS.jsonbin+"latest")
+        // .then(res => "")
+        // .catch(e => {alert("JSON BIN WRONG")})
     }
     
     render() { 
