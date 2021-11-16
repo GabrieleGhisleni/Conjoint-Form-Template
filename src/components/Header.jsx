@@ -26,13 +26,19 @@ const Header = (props) => {
                         </Button>
                     </Col>
                     <Col xs='12' className='home-description-text'><hr />{TEXT[props.lang].description}<hr /></Col>
-                    <Col xs='12' className='text-center iframe-container'>
-                        <h4>{TEXT[props.lang].title} {props.lang === 'it' ? <span>Dimostrazione</span> : <span>Showing off</span>}</h4>
-                        <Iframe url={TEXT[props.lang].url}
-                            width="100%"
-                            height="200%"
-                            allowFullScreen
-                            allow="fullscreen" />
+                    <Col xs='12' className='text-center iframe-container'>   
+                        <iframe 
+                        title="description"
+                        frameborder="0" 
+                        scrolling="no"
+                        marginheight="0"
+                        width="443" 
+                        style={{borderRadius:"20px"}}
+                        height="443" 
+                        type="text/html" 
+                        allow='fullscreen'
+                        src= {TEXT[props.lang].url+"?fs=1&iv_load_policy=3&showinfo=0"}>
+                        </iframe>
                     </Col>
                     <Col xs='12' className='text-center button-go-form'>
                         <hr />
