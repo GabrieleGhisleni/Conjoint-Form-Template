@@ -4,13 +4,13 @@ export const TEXT = {
         title: <span>Economies</span>,
         description: (
             <span>
-                Hi, thank you to be here.
+                Hi, thanks for being here.
                 <br />
-                
-                The following questions are thought to understand the more important
-                features for 'Economies' which is an application made for handle the
-                domestic economies. Below you can find the main features that you are 
-                going to rate and also a video (highly recommended, ~ 2m) showing off them.
+                The following questions are designed to understand what may be the most important features for an application aimed 
+                at managing household finances. Each question consists in choosing the best product among three possible options. 
+                Each of these options is defined by features or characteristics, what they consist of are explained below 
+                (there is also a recommended illustrative video lasting about 2 minutes to understand what these features represent).
+            
                 <br/><br/>
                 Otherwhise you can have a look by yourself here: &nbsp;
                 <a 
@@ -76,7 +76,8 @@ export const TEXT = {
                     <br/>
                 
                 The time to complete the form is estimated ~ 9 m.<br/><br/>
-                PS: Try when answering to assume that you are interested in a similar product even if you are not :D
+                The goal is to simulate a consumer who is potentially interested in this article, 
+                so I ask you to identify yourself and respond as if you were.
             </span>
         ),
         h2: <span>Video Tutorial</span>,
@@ -92,9 +93,11 @@ export const TEXT = {
                 <br />
                 Le seguenti domande sono pensate per comprendere quali possano essere 
                 le features più importanti per un applicazione finalizzata alla gestione 
-                delle finanze domestiche. Di seguito sono illustrate quelle che sono
-                state identificate come tali (è inoltre presente un video illustrativo
-                raccomandato dalla durata di circa 2 minuti).
+                delle finanze domestiche. Ogni domanda consiste nella scelta del migliore
+                prodotto fra tre possibili opzioni. Ognuna di queste opzioni viene definita
+                da delle features o caratteristiche, di seguito sono spiegate in cosa consistono
+                (è inoltre presente un video illustrativo raccomandato dalla durata di circa 2 minuti per comprendere
+                cosa tali features rappresentano).
                 <br/><br/>
                 Oppure puoi dare un'occhiata tu stesso all'app qui: &nbsp;
                 <a 
@@ -102,9 +105,9 @@ export const TEXT = {
                 target='_blank'
                 style={{color:"purple", fontWeight:"bold", fontStyle:"italic"}}>
                     Economies</a> 
-                <br /> <br />
-                Le features sono:
-                
+                <br />
+                Le features (caratteristiche che variano tra le opzioni) sono:
+                <br/><br/>
                 &#8226; Piattaforma
                         <ol> 
                             <li> Applicazione Web (mobile friendly, ma necessità di aprire il browser). </li>
@@ -160,7 +163,8 @@ export const TEXT = {
                 
                Il tempo di completamento del form è di circa 9 minuti + 2 di video.
                <br/><br/>
-               PS: Mentre rispondi cerca di metterti nei panni di un consumatore il quale è interessato a un prodotto simile, anche se non lo sei :D
+               L'obiettivo è simulare un consumatore il quale è potenzialmente interessato a tale articolo,
+               ti chiedo dunque di immedesimarti e di rispondere come se lo fossi.
             </span>
         ),
         h2: <span>Video Tutorial</span>,
