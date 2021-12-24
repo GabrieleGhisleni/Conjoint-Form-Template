@@ -35,8 +35,8 @@ $container-color: rgb(250, 227, 227)!important;
         font-style: italic;
     }
     .question-row{
-        margin:5rem 1.5rem;
-        padding:1rem;
+        margin:5rem .5rem;
+        padding:0.2rem;
         border: rgb(70, 68, 68) 1px solid;
         border-radius: 10px;
         font-weight: 800;
@@ -65,7 +65,7 @@ body{
 }
 
 .main-container{
-    padding: 0 3rem;
+    padding: 0!important;
     overflow: hidden;
     border-radius: 10px;
     background-color: $container-color;
